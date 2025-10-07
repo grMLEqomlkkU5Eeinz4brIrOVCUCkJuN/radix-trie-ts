@@ -1,0 +1,57 @@
+{
+  "name": "radix-trie-ts",
+  "version": "1.0.0",
+  "description": "A TypeScript implementation of a Radix Trie data structure", 	
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["trie", "radix", "typescript", "data-structure", "tree"],
+  "author": "grml",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.7.0",
+    "eslint": "^9.37.0",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.{ts,js}",
+      "!lib/**/*.d.ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ]
+  }
+}
